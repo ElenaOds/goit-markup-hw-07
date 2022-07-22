@@ -822,17 +822,17 @@ section {
     outline: none;
     cursor: pointer;
 }
-.modal__icon {
+.modal__img {
     fill: #000008;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__button:hover .modal__icon{
+.modal__button:hover .modal__img{
     fill: var(--accent-color);
 }
 
-.modal__button:focus .modal__icon {
+.modal__button:focus .modal__img {
     fill: var(--accent-color);
 }
 
@@ -902,7 +902,6 @@ section {
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .modal__text:hover,
 .modal__text:focus {
