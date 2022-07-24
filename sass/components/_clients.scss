@@ -1,0 +1,44 @@
+.clients {
+    display: flex;
+}
+
+.clients__list {
+    margin-right: 30px;
+}
+
+.clients__list:last-child {
+    margin-right: 0;
+}
+
+.clients__link {
+    @include centeredFlex ();
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $iconFill;
+    border-radius: 4px;
+    background-color: $primaryBackgroundColor;
+
+   transition: border-color $transition;
+}
+
+.clients__link:hover,
+.clients__link:focus {
+    border-color: $accentColor;
+    outline: none;
+}
+
+
+
+.clients__icon {
+    fill: $iconFill;
+
+    transition: fill $transition;
+}
+
+.clients__link:hover .clients__icon, 
+.clients__link:focus .clients__icon {
+    fill: $accentColor;
+}
+
+

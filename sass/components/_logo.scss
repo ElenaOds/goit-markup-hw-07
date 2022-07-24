@@ -1,0 +1,9 @@
+.logo {
+    color: $blackColor;
+    @extend %logo;
+}
+
+.logo__web {
+    color: $accentColor;
+    @extend %logo;
+}

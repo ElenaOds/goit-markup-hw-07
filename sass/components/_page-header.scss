@@ -1,0 +1,11 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.container--flex {
+    display: flex;
+}
+
+.nav-list {
+    @include centeredFlex();
+}
