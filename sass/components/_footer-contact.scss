@@ -7,10 +7,9 @@
     text-decoration: none;
 
     transition: color $transition;
-}
 
-.footer__contact:hover,
-.footer__contact:focus {
-    color: $accentColor;
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
 }
-

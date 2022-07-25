@@ -7,10 +7,16 @@
 
 .social-icons__list {
     margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
-.social-icons__list:last-child {
-    margin-right: 0;
+.social-icons__icon {
+    fill: $iconFill;
+
+    transition: fill $transition;
 }
 
 .social-icons__link {
@@ -24,25 +30,23 @@
     cursor: pointer;
 
     transition: background-color $transition;
+
+
+    &:hover {
+        background-color: $accentColor;
+    }
+
+    &:focus {
+        background-color: $accentColor;
+        outline: none;
+    }
+
+    &:hover ,
+    &:focus {
+        fill: $primaryBackgroundColor;
+        
+        .social-icons__icon {
+            fill: $primaryBackgroundColor;
+        }
+    }
 }
-
-.social-icons__icon {
-    fill: $iconFill;
-
-    transition: fill $transition;
-}
-
-.social-icons__link:hover {
-    background-color: $accentColor;
-}
-
-.social-icons__link:focus {
-    background-color: $accentColor;
-    outline: none;
-}
-
-.social-icons__link:hover .social-icons__icon,
-.social-icons__link:focus .social-icons__icon {
-    fill: $primaryBackgroundColor;
-}
-

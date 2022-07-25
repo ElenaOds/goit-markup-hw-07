@@ -7,6 +7,14 @@
 
 .policy__input {
     appearance: none;
+
+    &:checked {
+        opacity: 1;
+
+        +.policy__icon {
+            opacity: 1;
+        }
+    }
 }
 
 .policy__checkbox {
@@ -32,10 +40,6 @@
     background-color: $accentColor;
 
     transition: opacity $transition;
-}
-
-.policy__input:checked+.policy__icon {
-    opacity: 1;
 }
 
 .policy__label {

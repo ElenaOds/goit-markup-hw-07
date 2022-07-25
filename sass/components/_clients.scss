@@ -4,10 +4,16 @@
 
 .clients__list {
     margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
-.clients__list:last-child {
-    margin-right: 0;
+.clients__icon {
+    fill: $iconFill;
+
+    transition: fill $transition;
 }
 
 .clients__link {
@@ -20,25 +26,17 @@
     background-color: $primaryBackgroundColor;
 
    transition: border-color $transition;
-}
 
-.clients__link:hover,
-.clients__link:focus {
-    border-color: $accentColor;
-    outline: none;
-}
+    &:hover,
+    &:focus {
+        border-color: $accentColor;
+        outline: none;
 
+        .clients__icon {
+            fill: $accentColor;
+        }
+    }
 
-
-.clients__icon {
-    fill: $iconFill;
-
-    transition: fill $transition;
-}
-
-.clients__link:hover .clients__icon, 
-.clients__link:focus .clients__icon {
-    fill: $accentColor;
 }
 
 

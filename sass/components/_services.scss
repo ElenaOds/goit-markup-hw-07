@@ -16,10 +16,10 @@
     position: relative;
     margin-right: 30px;
     width: 370px;
-}
 
-.service-list__item:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .service-list__label {

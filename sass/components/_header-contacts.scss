@@ -11,19 +11,19 @@
     @include centeredFlex ();
     padding-top: 32px;
     padding-bottom: 32px;
-    color: $primaryTextColor;
+    color: $titleTextColor;
     @extend %header-links;
     
     transition: color $transition;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
 }
 
 .contact__icon {
     fill: currentColor;
     margin-right: 10px;
     align-items: center;
-}
-
-.contact__link:hover,
-.contact__link:focus {
-    color: $accentColor;
 }

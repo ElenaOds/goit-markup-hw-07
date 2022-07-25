@@ -26,17 +26,21 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     outline: none;
     cursor: pointer;
+
+    &:hover ,
+    &:focus {
+        fill: $accentColor;
+
+        .modal__img {
+        fill: $accentColor;
+            }
+    }
 }
 
 .modal__img {
     fill: #000008;
 
     transition: fill $transition;
-}
-
-.modal__button:hover .modal__img,
-.modal__button:focus .modal__img {
-    fill: $accentColor;
 }
 
 .modal__title {
@@ -72,22 +76,6 @@
     color: $primaryTextColor;
 }
 
-.modal__text {
-    margin: 0;
-    height: 40px;
-    width: 100%;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 42px;
-    padding-right: 12px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    font-size: 12px;
-    outline: none;
-
-    transition: border $transition;
-}
-
 .modal__input {
     position: relative;
 }
@@ -103,19 +91,43 @@
     transition: fill $transition;
 }
 
-.modal__text:hover,
-.modal__text:focus {
-    border: 1px solid $accentColor;
-}
+.modal__text {
+    margin: 0;
+    height: 40px;
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    padding-right: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
 
-.modal__text:hover+.modal__icon,
-.modal__text:active+.modal__icon {
-    fill: $accentColor;
-}
+    transition: border $transition;
 
-.modal__text:focus+.modal__icon,
-.modal__text:active+.modal__icon {
-    fill: $accentColor;
+    &:hover,
+    &:focus {
+        border: 1px solid $accentColor;
+    }
+
+    &:hover,
+    &:active {
+        fill: $accentColor;
+
+        +.modal__icon {
+            fill: $accentColor;
+        }
+    }
+
+    &:focus,
+    &:active {
+        fill: $accentColor;
+
+        +.modal__icon {
+            fill: $accentColor;
+        }
+    }
 }
 
 .modal__field textarea {
@@ -129,15 +141,16 @@
     resize: none;
 
     transition: border $transition;
-}
 
-.modal__field textarea:hover,
-.modal__field textarea:focus {
-    border: 1px solid $accentColor;
-    outline: none;
-}
 
-.modal__field textarea::placeholder {
-    @extend %modal__label;
-    color: rgba(117, 117, 117, 0.5);
+    &:hover,
+    &:focus {
+        border: 1px solid $accentColor;
+        outline: none;
+    }
+
+    &::placeholder {
+        @extend %modal__label;
+        color: rgba(117, 117, 117, 0.5);
+    }
 }
