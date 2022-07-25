@@ -9,9 +9,9 @@
 
 .contact__link {
     @include centeredFlex ();
+    color: $primaryTextColor;
     padding-top: 32px;
     padding-bottom: 32px;
-    color: $titleTextColor;
     @extend %header-links;
     
     transition: color $transition;
